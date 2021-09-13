@@ -6,7 +6,7 @@ export const Card = styled.div`
   grid-template-columns: 1fr 1fr;
   place-items: center;
   width: 100%;
-  background-color: rgba(235, 94, 136, 1);
+  background-color: rgba(235, 94, 136, .9);
   padding: 22px;
   box-sizing: border-box;
 `;

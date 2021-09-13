@@ -3,8 +3,7 @@ import Proptypes from 'prop-types';
 import { FaArrowUp } from 'react-icons/fa';
 import { Card, TopTitle } from './styles';
 
-const LargeCard = (props) => {
-  const { popularStock } = props;
+const LargeCard = ({ popularStock }) => {
   const { name, price } = popularStock;
   return (
     <Card>

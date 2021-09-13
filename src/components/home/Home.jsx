@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import { Container, Line } from './styles';
 import LargeCard from '../general/largeCard/LargeCard';
+import Navbar from '../general/navbar/Navbar';
 
 const Home = () => {
   const [popularStock] = useState({
@@ -10,6 +11,7 @@ const Home = () => {
   });
   return (
     <Container>
+      <Navbar title="Higher Price" />
       <LargeCard popularStock={popularStock} />
       <Line />
     </Container>
