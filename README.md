@@ -54,6 +54,10 @@ Feel free to check the [issues page](https://github.com/miguelesco/capstone-m3/i
 
 - [Microverse](https://www.microverse.org/)
 
+Design:
+ - Original design idea by [Nelson Sakwa on Behance](https://www.behance.net/sakwadesignstudio)
+ - Licenced under The [Creative Commons license](https://creativecommons.org/licenses/by-nc/4.0/)
+
 ## 📝 License
 
 This project is [MIT](LICENSE) licensed.

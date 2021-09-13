@@ -5,6 +5,7 @@ import {
   Route,
 } from 'react-router-dom';
 import GlobalStyles from '../styles/GlobalStyles';
+import Home from './home/Home';
 
 function App() {
   return (
@@ -12,7 +13,7 @@ function App() {
       <GlobalStyles />
       <Switch>
         <Route path="/" exact>
-          <h1>hello</h1>
+          <Home />
         </Route>
       </Switch>
     </Router>
