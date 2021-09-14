@@ -10,7 +10,9 @@ const options = [
   'Lower Price',
 ];
 
-const Navbar = ({ title, back, filter }) => {
+const Navbar = ({
+  title, back, filter, handdleFilter,
+}) => {
   const [anchorEl, setAnchorEl] = useState(null);
 
   const open = Boolean(anchorEl);
@@ -21,7 +23,7 @@ const Navbar = ({ title, back, filter }) => {
 
   const handleClose = (event) => {
     setAnchorEl(null);
-    console.log(event.currentTarget.textContent);
+    handdleFilter(event.target.innerText);
   };
 
   return (
@@ -64,6 +66,7 @@ Navbar.propTypes = {
   title: Proptypes.string.isRequired,
   back: Proptypes.bool,
   filter: Proptypes.bool,
+  handdleFilter: Proptypes.func.isRequired,
 };
 
 Navbar.defaultProps = {

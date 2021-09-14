@@ -28,5 +28,12 @@ LargeCard.propTypes = {
   popularStock: Proptypes.shape({
     name: Proptypes.string,
     price: Proptypes.number,
-  }).isRequired,
+  }),
+};
+
+LargeCard.defaultProps = {
+  popularStock: {
+    name: '',
+    price: 0,
+  },
 };
