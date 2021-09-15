@@ -1,5 +1,6 @@
 /* eslint-disable linebreak-style */
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 import chart from '../../../assets/images/analytics.svg';
 import {
   CardContainer, Card, CardImage, Description,
@@ -8,16 +9,20 @@ import {
 const Cards = ({ stocks }) => (
   <CardContainer>
     {
-        stocks.map((stock) => (
-          <Card key={stock.symbol}>
-            <CardImage>
-              <img src={chart} alt="chart" />
-            </CardImage>
-            <Description>
-              <p>{stock.name}</p>
-              <span>{stock.price}</span>
-            </Description>
-          </Card>
+        stocks.map((stock, i) => (
+          <li key={stock.symbol}>
+            <Link to={`/details/${stock.symbol}`}>
+              <Card index={i + 1}>
+                <CardImage>
+                  <img src={chart} alt="chart" />
+                </CardImage>
+                <Description>
+                  <p>{stock.name}</p>
+                  <span>{stock.price}</span>
+                </Description>
+              </Card>
+            </Link>
+          </li>
         ))
       }
   </CardContainer>

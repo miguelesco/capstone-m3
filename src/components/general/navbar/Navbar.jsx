@@ -66,10 +66,11 @@ Navbar.propTypes = {
   title: Proptypes.string.isRequired,
   back: Proptypes.bool,
   filter: Proptypes.bool,
-  handdleFilter: Proptypes.func.isRequired,
+  handdleFilter: Proptypes.func,
 };
 
 Navbar.defaultProps = {
   back: false,
   filter: true,
+  handdleFilter: () => {},
 };

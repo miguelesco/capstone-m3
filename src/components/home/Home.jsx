@@ -12,7 +12,7 @@ const Home = () => {
   const [filter] = useState(true);
   const dispatch = useDispatch();
   const { CompaniesReducer } = useSelector((state) => state);
-  const [stocks, setStocks, refresh] = useSort(CompaniesReducer, false);
+  const [stocks, setStocks, refresh] = useSort(CompaniesReducer.companies, false);
 
   const handdleFilter = (typeOfFilter = '') => {
     refresh(typeOfFilter === 'Lower Price');
@@ -25,10 +25,18 @@ const Home = () => {
   }, []);
 
   useEffect(() => {
-    if (CompaniesReducer.length > 0) {
-      setStocks(CompaniesReducer);
+    if (CompaniesReducer.companies.length > 0) {
+      setStocks(CompaniesReducer.companies);
     }
-  }, [CompaniesReducer]);
+  }, [CompaniesReducer.companies]);
+
+  if (CompaniesReducer.loading) {
+    return <h1>LOADING</h1>;
+  }
+
+  if (CompaniesReducer.error) {
+    return <h1>{CompaniesReducer.error}</h1>;
+  }
 
   return (
     <Container>
