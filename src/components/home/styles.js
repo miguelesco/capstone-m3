@@ -15,8 +15,11 @@ export const Container = styled.div`
 
 export const Line = styled.div`
   width: 100%;
-  height: 1px;
-  background-color: #e5e5e5;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  background-color: rgba(235, 94, 136, 1);
+  color: #fff;
+  font-size: 14px;
+  margin: 0px;
+  padding: 5px 10px;
+  box-sizing: border-box;
+  font-style: italic;
 `;

@@ -34,7 +34,9 @@ const Details = () => {
     <Container>
       <Navbar back filter={false} title={symbol} />
       <LargeCard popularStock={popular} img={companyProfile.image} />
-      <Line />
+      <Line>
+        Company Details
+      </Line>
       <ListOfDetails>
         {
           Object.keys(companyProfile).map((key, i) => (

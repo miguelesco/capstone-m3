@@ -1,4 +1,5 @@
 /* eslint-disable linebreak-style */
+import { Link } from 'react-router-dom';
 import { FaRegSun, FaArrowLeft } from 'react-icons/fa';
 import { useState } from 'react';
 import { MenuItem, Menu } from '@material-ui/core';
@@ -30,9 +31,11 @@ const Navbar = ({
     <NavbarContainer>
       {
         back && (
-        <BackArrow>
-          <FaArrowLeft />
-        </BackArrow>
+          <BackArrow>
+            <Link to="/">
+              <FaArrowLeft />
+            </Link>
+          </BackArrow>
         )
       }
       <Title>{title}</Title>

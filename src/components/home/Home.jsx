@@ -42,7 +42,9 @@ const Home = () => {
     <Container>
       <Navbar title="Higher Price" handdleFilter={handdleFilter} filter={filter} />
       <LargeCard popularStock={stocks[0]} />
-      <Line />
+      <Line>
+        Companies Stocks
+      </Line>
       <Cards stocks={stocks} />
     </Container>
   );
