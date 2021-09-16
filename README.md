@@ -10,7 +10,7 @@ This Web application is about building a mobile web application to check a list 
 ## :red_circle: Live Demo and Explaining Video
 
 - [Github](https://miguelesco.github.io/capstone-m3/#/) 
-
+- [Video](https://www.loom.com/share/0636c7f297cc4f2d88b233b5c4a49d97)
 
 ## :hammer: Built With
 
