@@ -47,12 +47,12 @@ export const CardImage = styled.div`
 `;
 
 export const Description = styled.div`
-  ${flex('column', 'flex-end', 'flex-end')};
+  ${flex('column', 'flex-end', 'center')};
   width: 100%;
   height: 100%;
   margin: 0px;
   p {
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-weight: bold;
     color: #fff;
     margin-top: 5px;

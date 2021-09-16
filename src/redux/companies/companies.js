@@ -38,7 +38,9 @@ const CompaniesReducer = (state = initialState, action) => {
     }
     case GET_COMPANIES: {
       const newCompanies = [...action.payload];
-      newCompanies.length = 10;
+      if (action.payload.length > 10) {
+        newCompanies.length = 10;
+      }
       return {
         ...defaultState,
         companies: [...newCompanies],
