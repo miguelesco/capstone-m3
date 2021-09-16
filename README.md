@@ -2,10 +2,10 @@
 
 # Capstone Project
 
-This Web application is about building a mobile web application to check a list of metrics (numeric values) that you will create making use of React and Redux.
+This Web application is about building a mobile web application to check a list of stocks of the market, filter and see data about an specific company and compare it with other companies.
 
-<!-- - ![screenshot](./src/resources/1.png)  
-- ![screenshot](./src/resources/2.png)  -->
+- ![screenshot](./src/assets/images/1.png)  
+- ![screenshot](./src/assets/images/2.png)  
 
 ## :red_circle: Live Demo and Explaining Video
 
