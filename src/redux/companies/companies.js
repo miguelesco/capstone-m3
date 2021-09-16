@@ -28,7 +28,11 @@ const CompaniesReducer = (state = initialState, action) => {
       };
     }
     case GET_COMPANY_PROFILE: {
-      const newProfile = action.payload[0];
+      let filterProfileEntries = Object.entries(action.payload[0]);
+      // eslint-disable-next-line no-unused-vars
+      filterProfileEntries = filterProfileEntries.filter(([_, value]) => !!value);
+
+      const newProfile = Object.fromEntries(filterProfileEntries);
       return {
         ...defaultState,
         companyProfile: newProfile,
