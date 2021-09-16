@@ -1,9 +1,10 @@
 /* eslint-disable linebreak-style */
 import { useSelector, useDispatch } from 'react-redux';
 import { useState, useEffect } from 'react';
+import { CircularProgress, Box } from '@mui/material';
 import useSort from '../../hooks/useSort';
 import { fetchCompanies } from '../../redux/companies/companies.action';
-import { Container, Line } from './styles';
+import { Container, Line, box } from './styles';
 import LargeCard from '../general/largeCard/LargeCard';
 import Navbar from '../general/navbar/Navbar';
 import Cards from './cards/Cards';
@@ -31,7 +32,11 @@ const Home = () => {
   }, [CompaniesReducer.companies]);
 
   if (CompaniesReducer.loading) {
-    return <h1>LOADING</h1>;
+    return (
+      <Box sx={box}>
+        <CircularProgress size={80} />
+      </Box>
+    );
   }
 
   if (CompaniesReducer.error) {

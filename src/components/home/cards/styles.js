@@ -11,7 +11,6 @@ export const CardContainer = styled.ul`
   margin: 0px;
 `;
 
-let change = false;
 export const Card = styled.div`
   ${flex('column', 'center', 'center')};
   box-sizing: border-box;
@@ -19,16 +18,7 @@ export const Card = styled.div`
   height: 100%;
   padding: 10px 20px;
   margin: 0px;
-  ${(props) => {
-    if (change) {
-      if (props.index % 2 !== 0) {
-        change = false;
-      }
-      return 'background-color: rgba(235, 94, 136, 1)';
-    }
-    change = !change;
-    return 'background-color: rgba(235, 94, 136, .9)';
-  }}; 
+  background-color: rgba(235, 94, 136, .9);
   transition: all 0.3s ease-in-out;
   &:hover {
     transform: scale(1.02);

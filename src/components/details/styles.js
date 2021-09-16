@@ -42,3 +42,9 @@ export const ListOfDetailsItem = styled.li`
     text-align: right;
   }
 `;
+
+export const box = {
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+};

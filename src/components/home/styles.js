@@ -23,3 +23,9 @@ export const Line = styled.div`
   box-sizing: border-box;
   font-style: italic;
 `;
+
+export const box = {
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+};

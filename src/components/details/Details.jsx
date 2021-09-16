@@ -1,10 +1,11 @@
 /* eslint-disable linebreak-style */
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { CircularProgress, Box } from '@mui/material';
 import { useParams } from 'react-router-dom';
 import { fetchCompanyProfile } from '../../redux/companies/companies.action';
 import {
-  Container, Line, ListOfDetails, ListOfDetailsItem,
+  Container, Line, ListOfDetails, ListOfDetailsItem, box,
 } from './styles';
 import Navbar from '../general/navbar/Navbar';
 import LargeCard from '../general/largeCard/LargeCard';
@@ -23,7 +24,11 @@ const Details = () => {
   }, []);
 
   if (CompaniesReducer.loading) {
-    return <h1>LOADING</h1>;
+    return (
+      <Box sx={box}>
+        <CircularProgress size={80} />
+      </Box>
+    );
   }
 
   if (CompaniesReducer.error) {
