@@ -1,6 +1,6 @@
 /* eslint-disable linebreak-style */
 import companiesReducer from '../../redux/companies/companies';
-import { addCompany } from '../../redux/companies/companies.action';
+import { addCompany, companyProfile } from '../../redux/companies/companies.action';
 
 const data = [
   {
@@ -23,6 +23,22 @@ const data = [
   },
 ];
 
+const profile = [
+  {
+    address: null,
+    beta: 1,
+    ceo: 'none',
+    companyName: 'SPDR S&P 500 ETF TRUST',
+    currency: 'USD',
+    description: 'SPDR S&P 500 ETF TRUST (SPY) is a mutual fund that invests in the S&P 500 Index.',
+    exchange: 'SPDR S&P 500 ETF TRUST',
+    exchangeTimezoneName: 'America/New_York',
+    exchangeTimezoneShortName: 'EDT',
+    financialCurrency: 'USD',
+    financialCurrencySymbol: '$',
+  },
+];
+
 describe('Test Companies Reducer', () => {
   const initialState = {
     companies: [],
@@ -35,11 +51,19 @@ describe('Test Companies Reducer', () => {
     expect(companiesReducer(undefined, {})).toEqual(initialState);
   });
 
-  it('return a new state after sending a list of companies to be add', async () => {
+  it('return a new state after sending a list of companies to be add', () => {
     const reducer = companiesReducer(initialState, addCompany(data));
     expect(reducer).toEqual({
       ...initialState,
       companies: data,
+    });
+  });
+
+  it('return a new state after sending a company profile to be add', () => {
+    const reducer = companiesReducer(initialState, companyProfile(profile));
+    expect(reducer).toEqual({
+      ...initialState,
+      companyProfile: profile[0],
     });
   });
 });

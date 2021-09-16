@@ -7,24 +7,24 @@ import {
 } from './styles';
 
 const Cards = ({ stocks }) => (
-  <CardContainer>
+  <CardContainer data-testid="container">
     {
-        stocks.map((stock, i) => (
-          <li key={stock.symbol}>
-            <Link to={`/details/${stock.symbol}`}>
-              <Card index={i + 1}>
-                <CardImage>
-                  <img src={chart} alt="chart" />
-                </CardImage>
-                <Description>
-                  <p>{stock.name}</p>
-                  <span>{stock.price}</span>
-                </Description>
-              </Card>
-            </Link>
-          </li>
-        ))
-      }
+      stocks.map((stock, i) => (
+        <li key={stock.symbol} data-testid={stock.symbol}>
+          <Link to={`/details/${stock.symbol}`}>
+            <Card index={i + 1}>
+              <CardImage>
+                <img src={chart} alt="chart" />
+              </CardImage>
+              <Description>
+                <p>{stock.name}</p>
+                <span>{stock.price}</span>
+              </Description>
+            </Card>
+          </Link>
+        </li>
+      ))
+    }
   </CardContainer>
 );
 
